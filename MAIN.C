@@ -10,6 +10,3 @@ int main(){
             case '1':
                 studentPanel();
                 break;
-            case '2':
-                adminPanel();
-                break;
