@@ -19,3 +19,6 @@ int main(){
                 printf("\nInvalid option");
                 getch();
         }
+    }
+    return 0;
+}
