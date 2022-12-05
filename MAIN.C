@@ -13,3 +13,5 @@ int main(){
             case '2':
                 adminPanel();
                 break;
+            case '3':
+                return 0;
