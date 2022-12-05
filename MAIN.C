@@ -6,3 +6,7 @@ int main(){
 		char input;
         scanf(" %c",&input);
 
+        switch(input){
+            case '1':
+                studentPanel();
+                break;
