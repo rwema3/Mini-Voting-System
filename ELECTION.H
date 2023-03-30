@@ -291,11 +291,6 @@ void adminPanel()
             break;
         }
 
-        printf("\n\nLOGGED IN SUCCESSFULLY (Press Enter)");
-		getch();
-
-        while(1)
-        {
             char inputID[15];
             char input;char banInp;
             int WinnerCid, totalVotedNow=0;
