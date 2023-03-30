@@ -215,32 +215,6 @@ void initiateNewElection()
     return;
 }
 
-                    return;
-                default:
-                    printf("Invalid Option");
-					getch();
-            }
-			
-        }
-    }
-
-};
-
-
-int isValid(char userID[15])
-{
-    if(strlen(userID)!=14)
-        return 0;
-    
-    int inputedYear=extractYear(userID);
-    int inputedRollNo = extractRollNo(userID);
-    
-    if(inputedYear!=currentValidID.year || checkBranchCode(userID)!=1 || inputedRollNo>currentValidID.totalVoters)
-        return 0;
-
-    return 1;
-}
-
 int isVoted(char userID[15])
 {
     int location=extractRollNo(userID);
