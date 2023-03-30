@@ -215,6 +215,27 @@ void initiateNewElection()
     return;
 }
 
+
+
+void studentPanel()
+{
+    char userID[15];
+    char voteInput;
+    while(1)
+	{
+		printf("\n\n  To exit press 0");
+        printf("\n  Enter user ID:");
+        scanf("%s",userID);
+        if(strcmp(userID, "0")==0)
+				return;
+        if(isValid(userID)!=1)
+        {
+            printf("\n  Invalid User ID(Press Enter)");
+            getch();
+            continue;
+        }
+        if(isBanned(userID)!=0)
+        {
             printf("\nThis User ID is currently banned...\nContact Admin for the reason...(Press Enter to continue)");
             getch();
             continue;
