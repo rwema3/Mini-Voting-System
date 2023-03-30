@@ -290,9 +290,6 @@ void adminPanel()
             printf("\n Wrong Username or Password \n");            
             break;
         }
-                    printf("\nEnter user ID to delete its vote: ");
-                    scanf("%s",inputID);
-                    deleteIllegalVote(inputID);
                     break;
                 case '4':
                     printf("Do you want to ban particular ID's?\nPress 1 if yes or any other key to continue...");
