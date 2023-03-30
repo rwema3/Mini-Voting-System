@@ -215,33 +215,6 @@ void initiateNewElection()
     return;
 }
 
-                    printf("\nEnter user ID to delete its vote: ");
-                    scanf("%s",inputID);
-                    deleteIllegalVote(inputID);
-                    break;
-                case '4':
-                    printf("Do you want to ban particular ID's?\nPress 1 if yes or any other key to continue...");
-                    scanf(" %c",&banInp);
-                    if(banInp=='1'){
-                        banID();
-                    }
-                    break;
-                case '5':
-                    WinnerCid = getWinner();
-                    if(WinnerCid != -1){
-                        printf("\nWinner is %s with %d votes\n",candidateArray[WinnerCid-1].cname,candidateArray[WinnerCid-1].votes);
-                    }
-                    else{
-                        printf("\nIts A TIE");
-                    }
-                    printf("\nFull Result\n");
-                    for(int i=0;i<numberOfCandidates;i++){
-                        totalVotedNow+=candidateArray[i].votes;
-                        printf("%d. %s -> %d votes\n",candidateArray[i].cid,candidateArray[i].cname,candidateArray[i].votes);
-                    }
-                    printf("\nVoting Percentage: %d %%\n\n",(totalVotedNow*100)/currentValidID.totalVoters);
-                    break;
-                case '6':
                     return;
                 default:
                     printf("Invalid Option");
