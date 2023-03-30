@@ -290,10 +290,6 @@ void adminPanel()
             printf("\n Wrong Username or Password \n");            
             break;
         }
-                case '2':
-                    loadElectionInfoFromFile();
-                    break;
-                case '3':
                     printf("\nEnter user ID to delete its vote: ");
                     scanf("%s",inputID);
                     deleteIllegalVote(inputID);
