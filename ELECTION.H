@@ -290,8 +290,6 @@ void adminPanel()
             printf("\n Wrong Username or Password \n");            
             break;
         }
-
-            char inputID[15];
             char input;char banInp;
             int WinnerCid, totalVotedNow=0;
             printf("\n1.New Election\n2.Continue Previous Election\n3.Delete Illegal Vote\n4.Ban User IDs\n5.Result\n6.Logout\nOption:");
