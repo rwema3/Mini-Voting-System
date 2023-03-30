@@ -215,6 +215,25 @@ void initiateNewElection()
     return;
 }
 
+    //load banned votes
+    int location;
+    f3=fopen("banned.txt","r+");
+    while(!feof(f3)){
+        fscanf(f3,"%d",&location);
+        studentVotes[location-1] = '$';
+    }
+    fclose(f3);
+    
+}
+
+void adminPanel()
+{
+    while(1){
+        
+        if(authenticateAdmin()!=1){
+            printf("\n Wrong Username or Password \n");            
+            break;
+        }
 
         printf("\n\nLOGGED IN SUCCESSFULLY (Press Enter)");
 		getch();
