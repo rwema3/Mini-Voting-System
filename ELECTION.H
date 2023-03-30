@@ -215,6 +215,27 @@ void initiateNewElection()
     return;
 }
 
+    //load candidates info and student votes
+    for (int i = 0; i < currentValidID.totalVoters; i++)
+    {
+        studentVotes[i] = '0';
+    }
+    for(int i=1;i<=numberOfCandidates;i++)
+    {
+        int location;
+        char filename[20];
+        sprintf(filename,"candidate%d.txt",i);
+        f2=fopen(filename,"r+");
+        candidateArray[i-1].cid=i;
+        fscanf(f2,"%d",&candidateArray[i-1].votes);
+        fscanf(f2,"%s",candidateArray[i-1].cname);
+        while(!feof(f2)){
+            fscanf(f2,"%d",&location);
+            studentVotes[location-1] = i+48;
+        }
+        fclose(f2);
+    }
+
     //load banned votes
     int location;
     f3=fopen("banned.txt","r+");
