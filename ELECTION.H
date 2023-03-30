@@ -215,11 +215,7 @@ void initiateNewElection()
     return;
 }
 
-void saveElectionInfoInFile(){
-    printf("Saving Election Info in File...\n");
-    FILE *fp = fopen("ElectionInfo.txt", "w");
-    if(fp==NULL)
-    {
+
         printf("\nError in file creation\n");
         fclose(fp);
         return;
