@@ -290,12 +290,6 @@ void adminPanel()
             printf("\n Wrong Username or Password \n");            
             break;
         }
-                    break;
-                case '4':
-                    printf("Do you want to ban particular ID's?\nPress 1 if yes or any other key to continue...");
-                    scanf(" %c",&banInp);
-                    if(banInp=='1'){
-                        banID();
                     }
                     break;
                 case '5':
