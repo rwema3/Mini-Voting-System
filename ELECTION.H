@@ -215,18 +215,6 @@ void initiateNewElection()
     return;
 }
 
-
-        printf("\nError in file creation\n");
-        fclose(fp);
-        return;
-    }
-    fprintf(
-        fp,"%d\n%s\n%d\n%d",
-        currentValidID.year,
-        currentValidID.branch,
-        currentValidID.totalVoters,
-        numberOfCandidates
-    );
     fclose(fp);
     printf("Saved Successfully : )");
 }
