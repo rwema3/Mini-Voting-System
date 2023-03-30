@@ -290,9 +290,6 @@ void adminPanel()
             printf("\n Wrong Username or Password \n");            
             break;
         }
-                    saveElectionInfoInFile();
-                    createCandidateFiles();
-                    break;
                 case '2':
                     loadElectionInfoFromFile();
                     break;
