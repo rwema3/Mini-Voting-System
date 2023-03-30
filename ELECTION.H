@@ -215,6 +215,22 @@ void initiateNewElection()
     return;
 }
 
+int isVoted(char userID[15])
+{
+    int location=extractRollNo(userID);
+    if(studentVotes[location-1]=='0')
+        return 0;
+    else
+        return 1;
+}
+
+int isBanned(char userID[15]){
+    int location=extractRollNo(userID);
+    if(studentVotes[location-1]=='$')
+        return 1;
+    else
+        return 0;
+}
 
 void saveVote(char userID[15],char voteInput)
 {
