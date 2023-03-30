@@ -215,6 +215,25 @@ void initiateNewElection()
     return;
 }
 
+    fclose(fp);
+    printf("Saved Successfully : )");
+}
+
+void loadElectionInfoFromFile()
+{
+    FILE *f1,*f2,*f3;
+    f1=fopen("ElectionInfo.txt","r");
+    if(f1==NULL)
+        printf("Not Exist");
+    fscanf(f1,"%d",&currentValidID.year);
+    fseek(f1,2,SEEK_CUR);
+    fscanf(f1,"%s",currentValidID.branch);
+    fseek(f1,2,SEEK_CUR);
+    fscanf(f1,"%d",&currentValidID.totalVoters);
+    fseek(f1,2,SEEK_CUR);
+    fscanf(f1,"%d",&numberOfCandidates);
+    fclose(f1);
+   
     //load candidates info and student votes
     for (int i = 0; i < currentValidID.totalVoters; i++)
     {
