@@ -216,6 +216,21 @@ void initiateNewElection()
 }
 
 
+void saveVote(char userID[15],char voteInput)
+{
+    char filename[20];
+    sprintf(filename,"candidate%d.txt",voteInput-48);
+    FILE *fp = fopen(filename,"r+");
+    int location=extractRollNo(userID);
+    studentVotes[location-1]=voteInput;
+    candidateArray[voteInput-49].votes++;
+    fseek(fp, 0, SEEK_SET);
+    fprintf(fp,"%d\n",candidateArray[voteInput-49].votes);
+    fseek(fp, 0, SEEK_END);
+    fprintf(fp,"\n%d",location);
+    fclose(fp);
+}
+
 
 void studentPanel()
 {
