@@ -291,7 +291,6 @@ void adminPanel()
             break;
         }
                     }
-                    break;
                 case '5':
                     WinnerCid = getWinner();
                     if(WinnerCid != -1){
