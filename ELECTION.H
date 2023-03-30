@@ -215,6 +215,29 @@ void initiateNewElection()
     return;
 }
 
+
+        printf("\n\nLOGGED IN SUCCESSFULLY (Press Enter)");
+		getch();
+
+        while(1)
+        {
+            char inputID[15];
+            char input;char banInp;
+            int WinnerCid, totalVotedNow=0;
+            printf("\n1.New Election\n2.Continue Previous Election\n3.Delete Illegal Vote\n4.Ban User IDs\n5.Result\n6.Logout\nOption:");
+			scanf(" %c",&input);
+
+            switch(input)
+            {
+                case '1':
+                    initiateNewElection();
+                    saveElectionInfoInFile();
+                    createCandidateFiles();
+                    break;
+                case '2':
+                    loadElectionInfoFromFile();
+                    break;
+                case '3':
                     printf("\nEnter user ID to delete its vote: ");
                     scanf("%s",inputID);
                     deleteIllegalVote(inputID);
